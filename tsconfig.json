@@ -4,5 +4,16 @@
     "target": "ES5",
     "module": "commonjs",
     "jsx": "react"
-  }
+  },
+  "files": [
+    "src/App.tsx",
+    "src/index.tsx",
+    "typings/react/react.d.ts",
+    "typings/typescript/typescript.d.ts"
+  ],
+  "filesGlob": [
+    "./src/**/*.tsx",
+    "./typings/**/*/*.d.ts"
+  ],
+  "exclude": []
 }

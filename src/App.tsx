@@ -7,7 +7,7 @@ export interface IAppProps {
 export default class App extends React.Component<IAppProps, any> {
 	render() {
 		return (
-			<h1>testing this, {this.props.name}!</h1>
+			<h1>testing thighs, {this.props.name}!</h1>
 		);
 	}
 }
