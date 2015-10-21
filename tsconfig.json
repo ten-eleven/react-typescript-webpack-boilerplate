@@ -6,14 +6,14 @@
     "jsx": "react"
   },
   "files": [
-    "src/App.tsx",
+    "src/components/App/src/App.tsx",
     "src/index.tsx",
-    "typings/react/react.d.ts",
-    "typings/typescript/typescript.d.ts"
+    "typings/tsd.d.ts"
   ],
   "filesGlob": [
     "./src/**/*.tsx",
-    "./typings/**/*/*.d.ts"
+    "./src/**/*.ts",
+    "./typings/tsd.d.ts"
   ],
   "exclude": []
 }

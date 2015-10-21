@@ -1,4 +1,5 @@
 import * as React from "react";
-import App from "./App.tsx";
+import * as ReactDOM from "react-dom";
+import App from "./components/App/src/App.tsx";
 
-React.render(<App name="Typescript"/>, document.getElementById('root'));
+ReactDOM.render(<App name="hgh"/>, document.getElementById('root'));

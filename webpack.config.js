@@ -17,10 +17,17 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   module: {
-    loaders: [{
-      test: /\.tsx?$/,
-      loaders: ['react-hot', 'ts'],
-      include: path.join(__dirname, 'src')
-    }]
+    loaders: [
+      {
+        test: /\.tsx?$/,
+        loaders: ['react-hot', 'ts'],
+        include: path.join(__dirname, 'src')
+      },
+      {
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass"],
+        include: path.join(__dirname, 'src')
+      }
+    ]
   }
 };
