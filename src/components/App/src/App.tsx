@@ -9,7 +9,10 @@ export interface IAppProps {
 export default class App extends React.Component<IAppProps, any> {
 	render() {
 		return (
-			<h1>testing thjdfis, {this.props.name}!</h1>
+			<div>
+				<h1>testing fvdf, {this.props.name}!</h1>
+				<div className="test">overlay background</div>
+			</div>
 		);
 	}
 }

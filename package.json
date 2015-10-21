@@ -10,6 +10,7 @@
   "license": "MIT",
   "devDependencies": {
     "css-loader": "^0.20.2",
+    "file-loader": "^0.8.4",
     "node-sass": "^3.3.3",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
