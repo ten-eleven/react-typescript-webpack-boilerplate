@@ -3,15 +3,29 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "postinstall": "tsd reinstall --overwrite --save",
-    "start": "node server.js"
+    "postinstall":"tsd reinstall --overwrite --save; npm run-script build",
+    "start": "node server.js",
+    "test": "karma start --single-run",
+    "build": "rm -rf dist && NODE_ENV=production node ./node_modules/webpack/bin/webpack -p --config ./webpack.prod.config.js --progress --profile --colors"
   },
   "author": "Joseph McElroy <joe@teneleven.co.uk>",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
+    "assets-webpack-plugin": "^3.1.0",
+    "autoprefixer": "^6.0.3",
     "css-loader": "^0.20.2",
+    "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.4",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.14",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-webpack": "^1.7.0",
     "node-sass": "^3.3.3",
+    "normalize.css": "^3.0.3",
+    "null-loader": "^0.1.1",
+    "phantomjs": "^1.9.18",
+    "phantomjs-polyfill": "0.0.1",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-hot-loader": "^1.3.0",
@@ -20,7 +34,12 @@
     "ts-loader": "^0.5.6",
     "tsd": "^0.6.5",
     "typescript": "^1.6.2",
+    "url-loader": "^0.5.6",
     "webpack": "^1.12.2",
+    "express": "^4.13.3",
+    "webpack-config": "^1.1.1"
+  },
+  "devDependencies": {
     "webpack-dev-server": "^1.12.1"
   }
 }

@@ -2,10 +2,10 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'eval',
+  devtool:"eval",
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
+    'webpack/hot/dev-server',
     './src/index.tsx'
   ],
   output: {
@@ -14,7 +14,8 @@ module.exports = {
     publicPath: '/static/'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
   ],
   module: {
     loaders: [
@@ -30,7 +31,9 @@ module.exports = {
       },
       {
         test: /\.(jpg|png)$/,
-        loader: "file-loader?name=[path][name].[ext]",
+        loaders: [
+            'file-loader?name=[path][name].[ext]'
+        ],
         include: path.join(__dirname, 'src')
       }
     ]
