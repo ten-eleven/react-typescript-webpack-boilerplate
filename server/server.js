@@ -26,11 +26,12 @@ if (!env.production) {
 } else {
 	var express = require('express');
 	var app = express();
-
-  app.use("/static",express.static(__dirname + '/dist'));
+  app.set('view engine', 'ejs');
+  app.set('views', __dirname + '/views');
+  app.use("/static", express.static(__dirname + '/../dist'));
 
 	app.get('/*', function(req, res) {
-		res.sendFile(path.join(__dirname, "index.html"));
+    res.render('index');
 	});
 
 	var port = Number(process.env.PORT || 3001);
