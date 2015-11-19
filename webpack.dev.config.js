@@ -1,17 +1,17 @@
 var path = require('path');
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool:"eval",
   entry: [
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/dev-server',
+    'webpack-hot-middleware/client?reload=true',
     './src/index.tsx'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/static/'
+    publicPath: '/static'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
